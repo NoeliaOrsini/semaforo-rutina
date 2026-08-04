@@ -329,10 +329,21 @@ window.addEventListener('error', function(ev){
   }
 
   function buildDailyTip(selections){
-    const priority = ['red','yellow','green','white'];
-    for(const level of priority){
-      for(const id of Object.keys(REFLECTIONS)){
-        if(selections[id] === level && REFLECTIONS[id][level] && REFLECTIONS[id][level].length > 0){
+    // Prioridad de color: rojo > amarillo > verde > blanco
+    const colorPriority = ['red','yellow','green','white'];
+    // Prioridad de áreas: sostenimiento → regulación → productivo
+    const categoryPriority = [
+      'descanso',
+      'emociones',
+      'alimentacion',
+      'actividad',
+      'esparcimiento',
+      'trabajo',
+      'estudio'
+    ];
+    for(const level of colorPriority){
+      for(const id of categoryPriority){
+        if(selections[id] === level && REFLECTIONS[id] && REFLECTIONS[id][level] && REFLECTIONS[id][level].length > 0){
           const cat = REFLECTIONS[id];
           return `${cat.icon} ${cat.label}: ${cat[level][0]}`;
         }
@@ -340,7 +351,7 @@ window.addEventListener('error', function(ev){
     }
     return 'Seguí cuidando tu equilibrio día a día.';
   }
-
+  
   function buildNutrition(selections){
     const nivel = selections.alimentacion || 'green'; 
     const activo = selections.actividad !== 'red';
