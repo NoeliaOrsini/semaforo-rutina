@@ -77,6 +77,10 @@ cd semaforo-rutina
 
 ---
 
+⚠️ **Aviso Importante:** Esta aplicación tiene fines exclusivamente de autoconocimiento y bienestar personal. Las reflexiones y sugerencias aquí brindadas son orientativas y no reemplazan en ningún caso el diagnóstico, tratamiento o consulta con un profesional de la salud. Ante cualquier duda, malestar sostenido o condición específica, consultá siempre con un médico, psicólogo o nutricionista.
+
+---
+
 ## ✍️ Autora
 
 Creado por **Noelia Orsini** — Counseling | Desarrolladora BackEnd | Abogada
