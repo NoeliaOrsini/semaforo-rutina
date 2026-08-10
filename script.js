@@ -695,7 +695,7 @@ window.addEventListener('error', function(ev){
       <div class="block-title">🍳 RECETARIO DE VIANDAS Y OPCIONES CASERAS</div>
       <p class="recipes-intro">Ideas simples para evitar ultraprocesados: viandas saladas y opciones dulces con ingredientes de casa.</p>
       <button type="button" class="download-btn" id="toggleRecipesBtn">Ver recetas</button>
-      <button type="button" class="download-btn" id="printRecipesBtn">Imprimir recetas</button>
+      <button type="button" class="download-btn" id="printRecipesBtn">Imprimir sugerencias del día</button>
       <div class="recipes-panel" id="recipesPanel" hidden>
         <div class="recipes-grid">
           ${buildRecipesHtml()}
