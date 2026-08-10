@@ -5,7 +5,13 @@
 🌐 **Repositorio:** [https://github.com/NoeliaOrsini/semaforo-rutina](https://github.com/NoeliaOrsini/semaforo-rutina)
 
 ---
+## 🚀 Probar online
 
+Si querés probar la aplicación **sin descargar ni clonar nada**, podés hacerlo directamente desde aquí:
+
+👉 **[Abrir El Semáforo de la Rutina Diaria](https://noeliaorsini.github.io/)**
+
+--- 
 ## 🌟 Características Principales
 
 1. **Evaluación en 7 Áreas del Bienestar**  
