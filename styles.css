@@ -292,6 +292,75 @@ h1,h2,h3{
 }
 .meal-card p{margin:0; font-size:.86rem; color:#CBD3E6;}
 
+.recipes-intro{
+  font-size:.88rem;
+  color:var(--ink-soft);
+  margin:0 0 12px;
+}
+
+.recipes-panel{
+  margin:14px 0 8px;
+}
+
+.recipes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:12px;
+  margin-top:14px;
+}
+
+.recipe-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(124,58,237,0.35);
+  border-radius:12px;
+  padding:14px 16px;
+}
+
+.recipe-tag{
+  display:inline-block;
+  font-family:'Quicksand', sans-serif;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--cyan);
+  border:1px solid rgba(34,211,238,0.35);
+  border-radius:999px;
+  padding:2px 10px;
+  margin-bottom:8px;
+}
+
+.recipe-card h4{
+  font-family:'Quicksand', sans-serif;
+  color:#C4B5FD;
+  font-size:.95rem;
+  margin:0 0 10px;
+}
+
+.recipe-label{
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--cyan);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  margin:8px 0 4px;
+}
+
+.recipe-ingredients{
+  margin:0;
+  padding-left:18px;
+  font-size:.84rem;
+  color:#CBD3E6;
+  line-height:1.45;
+}
+
+.recipe-steps{
+  margin:0;
+  font-size:.84rem;
+  color:#CBD3E6;
+  line-height:1.45;
+}
+
 .disclaimer-box{
   border-radius:12px;
   padding:14px 18px;
