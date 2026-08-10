@@ -85,7 +85,8 @@ window.addEventListener('error', function(ev){
       options:[
         {value:'green', text:'Muy productivo / Avancé firme'},
         {value:'yellow', text:'Sostenido / Hice lo que pude'},
-        {value:'red', text:'Estancado / Sin foco'}
+        {value:'red', text:'Estancado / Sin foco'},
+        {value:'white', text:'No estudio / No aplica'}
       ]
     },
     {
@@ -205,6 +206,10 @@ window.addEventListener('error', function(ev){
         'Agarrá una hoja y anote aquellas cosas que le/o hicieron sentir así, para poder tomar conocimiento y ver posibles soluciones.',
         'Probá una respiración profunda y lenta (inhalar 4 segundos, sostener 4, exhalar 6) para bajar la intensidad del momento.',
         'Si esto se repite seguido, hablarlo con un profesional puede aliviar mucho — no hace falta atravesarlo solo/a.'
+      ],
+      white:[
+        'Hoy no fue un día de estudio formal. Está bien: no todo día tiene que incluir estudiar.',
+        'Si en algún momento retomás, una meta chica y clara ayuda a arrancar sin presión.'
       ]
     },
     actividad:{
