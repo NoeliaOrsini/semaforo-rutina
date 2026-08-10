@@ -12,20 +12,19 @@ Si querés probar la aplicación **sin descargar ni clonar nada**, podés hacerl
 👉 **[Abrir El Semáforo de la Rutina Diaria](https://noeliaorsini.github.io/semaforo-rutina/)**
 
 --- 
-
 ## 🌟 Características Principales
 
 1. **Evaluación en 7 Áreas del Bienestar**  
-   Emociones, Actividad Física, Descanso, Trabajo, Estudio, Esparcimiento y Alimentación.
+   Revisión guiada de Emociones, Actividad Física, Descanso, Trabajo, Estudio (incluyendo la opción "No estudio"), Esparcimiento y Alimentación.
 
 2. **Semáforo Dinámico Inteligente**  
-   Algoritmo de estado que pondera prioridades vitales (priorizando alertas rojas y amarillas en descanso, alimentación y emociones).
+   Algoritmo de estado que pondera prioridades vitales (priorizando alertas en descanso, alimentación y emociones) para definir el color general del día.
 
 3. **Reflexiones y Orientación Nutricional**  
-   Sugerencias personalizadas según el estado reportado en cada área.
+   Sugerencias personalizadas según el estado reportado, un consejo destacado del día y propuestas de recetas fáciles y prácticas para desayuno, almuerzo, merienda y cena.  Se le agregó un botón para visualizar u ocultar 9 recetas prácticas y otro para imprimir las sugerencias del día en las 7 áreas, incluidas las recetas.
 
 4. **Historial Local y Exportación a CSV**  
-   Registro automático en `localStorage` y descarga optimizada en `.csv` con resultado definitivo en mayúsculas y sugerencias con su respectivo emoji.
+   Registro automático guardado en el navegador mediante `localStorage` y descarga optimizada del historial completo en formato `.csv`.
 
 ---
 
