@@ -281,8 +281,8 @@ window.addEventListener('error', function(ev){
         'No te exiges retomar todo de golpe: un poco de avance también cuenta.'
       ],
       white:[
-        'Hoy no fue un día de estudio formal. Está bien: no todo día tiene que incluir estudiar.',
-        'Si en algún momento retomás, una meta chica y clara ayuda a arrancar sin presión.'
+        'Esta área no aplica como estudio formal: no estás en una cursada o formación estructurada ahora, y está bien.',
+        'Igual, siempre estamos aprendiendo: en el trabajo, en casa, con otras personas o con lo que la vida nos va mostrando. Ese aprendizaje también cuenta.'
       ]
     },
     esparcimiento:{
