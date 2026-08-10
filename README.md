@@ -9,7 +9,7 @@
 
 Si querés probar la aplicación **sin descargar ni clonar nada**, podés hacerlo directamente desde aquí:
 
-👉 **[Abrir El Semáforo de la Rutina Diaria](https://noeliaorsini.github.io/)**
+👉 **[Abrir El Semáforo de la Rutina Diaria](https://noeliaorsini.github.io/semaforo-rutina/)**
 
 --- 
 ## 🌟 Características Principales
