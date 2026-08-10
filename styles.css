@@ -618,3 +618,49 @@ h1,h2,h3{
   .history-item{ flex-direction:column; align-items:flex-start; gap:8px; }
   #evaluateBtn{ width:100%; max-width:320px; }
 }
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 12px !important;
+  }
+  .hero,
+  .categories,
+  .evaluate-row,
+  .history,
+  .site-footer,
+  .toast-container,
+  .modal-overlay,
+  .error-banner,
+  #evaluateBtn,
+  .download-btn,
+  .disclaimer-box {
+    display: none !important;
+  }
+  .results {
+    display: block !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  .recipes-panel {
+    display: block !important;
+  }
+  .recipe-card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    color: #000;
+    background: #fff;
+  }
+  .recipe-card h4,
+  .recipe-label,
+  .recipe-tag {
+    color: #000 !important;
+  }
+  .recipe-ingredients,
+  .recipe-steps {
+    color: #222 !important;
+  }
+}
