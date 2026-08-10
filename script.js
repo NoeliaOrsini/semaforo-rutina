@@ -447,9 +447,35 @@ window.addEventListener('error', function(ev){
         'Puñado de pasas o chips de chocolate (opcional)'
       ],
       steps: 'Mezclar todos los ingredientes hasta formar una masa. Armar galletitas aplastadas en una placa. Hornear a 180°C durante 12-15 minutos hasta que estén doradas en los bordes. Dejar enfriar antes de guardar.'
+    },     
+    {
+      tag: 'Vianda',
+      title: 'Zapallitos Rellenos al Horno',
+      ingredients: [
+        '4 zapallitos medianos',
+        '1 cebolla picada',
+        '100 g de queso cremoso o mozzarella',
+        '2 cucharadas de queso rallado',
+        '1 huevo',
+        '2 cucharadas de avena o pan rallado integral',
+        'Aceite, sal, pimienta y orégano'
+      ],
+      steps: 'Hervir los zapallitos enteros 8-10 minutos hasta que estén tiernos. Cortar a la mitad, sacar la pulpa con cuidado y picarla. Rehogar la cebolla, mezclar con la pulpa, el huevo, la avena, sal y condimentos. Rellenar las mitades, cubrir con queso y hornear a 180°C unos 20 minutos hasta gratinar.'
+    },
+    {
+      tag: 'Vianda',
+      title: 'Morrón Abierto con Huevo',
+      ingredients: [
+        '2 morrones grandes (rojos o verdes)',
+        '2 o 4 huevos (1 o 2 por mitad)',
+        'Queso rallado o en fetas (opcional)',
+        'Aceite, sal, pimienta y hierbas a gusto',
+        'Opcional: cebolla o tomate picado en la base'
+      ],
+      steps: 'Cortar los morrones a la mitad a lo largo, sacar semillas y colocarlo en una placa aceitada. Si querés, poner un poco de cebolla o tomate en la base. Cascar un huevo en cada mitad, salpimentar, agregar queso si te gusta y hornear a 180°C 15-20 minutos hasta que el huevo esté cocido a tu gusto. Ideal de vianda o cena rápida.'
     }
   ];
-
+  
   function buildRecipesHtml(){
     return RECIPES.map(r => {
       const ingredientsList = r.ingredients.map(i => `<li>${i}</li>`).join('');
@@ -669,6 +695,7 @@ window.addEventListener('error', function(ev){
       <div class="block-title">🍳 RECETARIO DE VIANDAS Y OPCIONES CASERAS</div>
       <p class="recipes-intro">Ideas simples para evitar ultraprocesados: viandas saladas y opciones dulces con ingredientes de casa.</p>
       <button type="button" class="download-btn" id="toggleRecipesBtn">Ver recetas</button>
+      <button type="button" class="download-btn" id="printRecipesBtn">Imprimir recetas</button>
       <div class="recipes-panel" id="recipesPanel" hidden>
         <div class="recipes-grid">
           ${buildRecipesHtml()}
@@ -699,6 +726,15 @@ window.addEventListener('error', function(ev){
               recipesPanel.setAttribute('hidden', '');
               toggleRecipesBtn.textContent = 'Ver recetas';
             }
+          });
+        }
+    
+    const printRecipesBtn = document.getElementById('printRecipesBtn');
+        if (printRecipesBtn && recipesPanel) {
+          printRecipesBtn.addEventListener('click', () => {
+            recipesPanel.removeAttribute('hidden');
+            if (toggleRecipesBtn) toggleRecipesBtn.textContent = 'Ocultar recetas';
+            window.print();
           });
         }
 
