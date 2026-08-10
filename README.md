@@ -12,6 +12,7 @@ Si querés probar la aplicación **sin descargar ni clonar nada**, podés hacerl
 👉 **[Abrir El Semáforo de la Rutina Diaria](https://noeliaorsini.github.io/semaforo-rutina/)**
 
 --- 
+
 ## 🌟 Características Principales
 
 1. **Evaluación en 7 Áreas del Bienestar**  
