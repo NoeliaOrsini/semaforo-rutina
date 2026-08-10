@@ -283,6 +283,10 @@ window.addEventListener('error', function(ev){
         'El estudio estuvo estancado hoy. Antes de exigirte más, revisá si el descanso, el trabajo o el estado emocional te están restando foco.',
         'Empezá con una tarea chica y fácil para agarrar impulso.',
         'No te exiges retomar todo de golpe: un poco de avance también cuenta.'
+      ],
+      white:[
+        'Hoy no fue un día de estudio formal. Está bien: no todo día tiene que incluir estudiar.',
+        'Si en algún momento retomás, una meta chica y clara ayuda a arrancar sin presión.'
       ]
     },
     esparcimiento:{
