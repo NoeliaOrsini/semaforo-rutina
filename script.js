@@ -357,6 +357,115 @@ window.addEventListener('error', function(ev){
     return 'Seguí cuidando tu equilibrio día a día.';
   }
   
+    const RECIPES = [
+    {
+      tag: 'Vianda',
+      title: 'Muffins Saludables de Verdura',
+      ingredients: [
+        '2 huevos',
+        '4 cucharadas de leche',
+        '1 cucharada de aceite',
+        '3 cucharadas colmadas de harina leudante',
+        'Sal y queso rallado',
+        '1 taza de verdura cocida y escurrida (espinaca, brócoli o zanahoria rallada)'
+      ],
+      steps: 'Licuar los huevos, la leche, el aceite, la harina, la sal y el queso por 1 minuto. Pasar a un bol e integrar la verdura picada. Volcar en moldes para muffins engrasados y hornear a 180°C por 20 minutos.'
+    },
+    {
+      tag: 'Vianda',
+      title: 'Bocaditos Express de Verdura',
+      ingredients: [
+        '1 taza de puré de calabaza (o papa)',
+        '1 taza de espinaca cocida picada',
+        '½ taza de choclo o zanahoria rallada',
+        '2 huevos',
+        '3 cucharadas de queso rallado',
+        '2 cucharadas de pan rallado integral (o avena)',
+        'Condimentos a gusto'
+      ],
+      steps: 'Mezclar todos los ingredientes en un bol. Armar bolitas o torrijas con las manos. Colocar en una placa aceitada y dorar al horno o sartén 10 minutos por lado.'
+    },
+    {
+      tag: 'Vianda',
+      title: 'Masa Casera y Relleno de Atún',
+      ingredients: [
+        'Masa: 2 tazas de harina común, 1 cdita. de sal, 4 cdas. de aceite, ½ taza de agua tibia',
+        'Relleno: 1 lata de atún, 1 huevo duro picado, 2 cdas. de queso crema, chorrito de puré de tomate'
+      ],
+      steps: 'Unir los ingredientes de la masa y amasar 2 minutos. Estirar fina. Mezclar los ingredientes del relleno, rellenar (tarta o empanadas) y hornear a fuego fuerte 15-20 minutos.'
+    },
+    {
+      tag: 'Vianda',
+      title: 'Terrina Express de Zucchini y Queso',
+      ingredients: [
+        '2 zucchinis (o zapallitos)',
+        '1 cebolla',
+        '3 huevos',
+        '3 cucharadas de queso crema',
+        '4 cucharadas de avena fina (o harina)',
+        '100 g de queso cremoso picado',
+        'Sal y pimienta'
+      ],
+      steps: 'Rallar los zucchinis y picar la cebolla; rehogar 5 minutos para sacar el exceso de agua. Batir huevos con queso crema, avena y condimentos. Incorporar vegetales y queso picado. Volcar en budinera aceitada y hornear a 180°C unos 30 minutos hasta que cuaje.'
+    },
+    {
+      tag: 'Dulce',
+      title: 'Torta de Naranja en Licuadora',
+      ingredients: [
+        '1 naranja entera (lavada, sin semillas ni fibras blancas)',
+        '3 huevos',
+        '½ taza de aceite',
+        '1 taza de azúcar',
+        '2 tazas de harina leudante',
+        '1 cdita. de vainilla'
+      ],
+      steps: 'Licuar la naranja en trozos con los huevos, el aceite, el azúcar y la vainilla. Pasar a un bol, incorporar la harina tamizada con movimientos suaves y verter en molde enmantecado. Hornear a 180°C durante 35-40 minutos.'
+    },
+    {
+      tag: 'Dulce',
+      title: 'Pancakes de Harina Integral',
+      ingredients: [
+        '1 taza de harina integral',
+        '1 huevo',
+        '¾ taza de leche (o bebida vegetal)',
+        '1 cucharadita de polvo de hornear',
+        '1 cucharadita de miel o azúcar mascabo (opcional)',
+        'Pizca de sal',
+        'Aceite o rocío vegetal para la sartén'
+      ],
+      steps: 'Mezclar los secos. Batir el huevo con la leche y la miel; unir con la harina sin batir de más. Cocinar por cucharadas en sartén antiadherente a fuego medio, 2-3 minutos por lado. Servir con fruta fresca.'
+    },
+    {
+      tag: 'Dulce',
+      title: 'Galletitas de Avena Simples',
+      ingredients: [
+        '1 taza de avena arrollada',
+        '1 banana madura pisada (o 3 cdas. de puré de manzana)',
+        '2 cucharadas de aceite o manteca derretida',
+        '2 cucharadas de miel o azúcar mascabo',
+        'Pizca de canela (opcional)',
+        'Puñado de pasas o chips de chocolate (opcional)'
+      ],
+      steps: 'Mezclar todos los ingredientes hasta formar una masa. Armar galletitas aplastadas en una placa. Hornear a 180°C durante 12-15 minutos hasta que estén doradas en los bordes. Dejar enfriar antes de guardar.'
+    }
+  ];
+
+  function buildRecipesHtml(){
+    return RECIPES.map(r => {
+      const ingredientsList = r.ingredients.map(i => `<li>${i}</li>`).join('');
+      return `
+        <div class="recipe-card">
+          <div class="recipe-tag">${r.tag}</div>
+          <h4>${r.title}</h4>
+          <p class="recipe-label">Ingredientes</p>
+          <ul class="recipe-ingredients">${ingredientsList}</ul>
+          <p class="recipe-label">Preparación</p>
+          <p class="recipe-steps">${r.steps}</p>
+        </div>
+      `;
+    }).join('');
+  }
+  
   function buildNutrition(selections){
     const nivel = selections.alimentacion || 'green'; 
     const activo = selections.actividad !== 'red';
@@ -555,6 +664,15 @@ window.addEventListener('error', function(ev){
           <h4>🌙 Cena</h4>
           <p>${nutritionObj.meals.cena}</p>
         </div>
+        
+      </div>
+      <div class="block-title">🍳 RECETARIO DE VIANDAS Y OPCIONES CASERAS</div>
+      <p class="recipes-intro">Ideas simples para evitar ultraprocesados: viandas saladas y opciones dulces con ingredientes de casa.</p>
+      <button type="button" class="download-btn" id="toggleRecipesBtn">Ver recetas</button>
+      <div class="recipes-panel" id="recipesPanel" hidden>
+        <div class="recipes-grid">
+          ${buildRecipesHtml()}
+        </div>
       </div>
 
       <div class="disclaimer-box recall-box">
@@ -568,6 +686,21 @@ window.addEventListener('error', function(ev){
 
     resultsEl.classList.add('show');
     resultsEl.scrollIntoView({behavior:'smooth'});
+
+    const toggleRecipesBtn = document.getElementById('toggleRecipesBtn');
+        const recipesPanel = document.getElementById('recipesPanel');
+        if(toggleRecipesBtn && recipesPanel){
+          toggleRecipesBtn.addEventListener('click', ()=>{
+            const isHidden = recipesPanel.hasAttribute('hidden');
+            if(isHidden){
+              recipesPanel.removeAttribute('hidden');
+              toggleRecipesBtn.textContent = 'Ocultar recetas';
+            } else {
+              recipesPanel.setAttribute('hidden', '');
+              toggleRecipesBtn.textContent = 'Ver recetas';
+            }
+          });
+        }
 
     const now = new Date();
     const timeFormatted = now.toLocaleTimeString('es-AR', {hour: '2-digit', minute: '2-digit'});
